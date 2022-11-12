@@ -10,7 +10,7 @@ jobs:
         id: milestone-data
         uses: pchainho/gantt-action@v0.2
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           repository: ${{ github.repository }}
           
