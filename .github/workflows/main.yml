@@ -8,11 +8,9 @@ jobs:
     steps:
       - name: Get Miletones step
         id: milestone-data
-        uses: pchainho/gantt-action@v0.3-alpha
+        uses: pchainho/gantt-action@v0.4-alpha
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          repository: ${{ github.repository }}
           
       - name: Debug milestone value
         run: echo "Title ${{ steps.milestone-data.outputs }}"
