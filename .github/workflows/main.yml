@@ -13,7 +13,6 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         with:
           repository: ${{ github.repository }}
-          who-to-greet: 'Paulo'
       # Use the output from the `hello` step
       - name: Debug milestone value
-        run: echo "Title: ${steps.milestone-data.outputs.data}"
+        run: echo "Title: ${{ steps.milestone-data.outputs.data }}"
