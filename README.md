@@ -1,2 +1,2 @@
 # gantt-action-test
-To test Gantt Generator Action.
+To test Gantt Generator Action..
