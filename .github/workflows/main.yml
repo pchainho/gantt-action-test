@@ -1,0 +1,19 @@
+
+on: [push]
+
+jobs:
+  milestones_data_job:
+    runs-on: ubuntu-latest
+    name: Get milestones data
+    steps:
+      - name: Get Miletones step
+        id: milestone-data
+        uses: pchainho/gantt-action@v1.0
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          repository: ${{ github.repository }}
+          who-to-greet: 'Paulo'
+      # Use the output from the `hello` step
+      - name: Debug milestone value
+        run: echo "Title: ${{ fromJson(steps.milestone-data.outputs.data) }}"
