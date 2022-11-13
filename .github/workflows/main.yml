@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: Get Miletones step
         id: milestone-data
-        uses: pchainho/gantt-action@v0.10-alpha
+        uses: pchainho/gantt-action@v0.11-alpha
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
