@@ -14,3 +14,11 @@ jobs:
           
       - name: Debug milestone value
         run: echo "Title ${{ steps.milestone-data.outputs }}"
+
+      - name: Commit Gantt plantuml file
+        uses: EndBug/add-and-commit@v4.4.0
+        with:
+          message: "autogen(docs): update gantt document"
+          author_name: pch
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN_PRIVILEGED }}
