@@ -4,8 +4,12 @@ on: [push]
 jobs:
   milestones_data_job:
     runs-on: ubuntu-latest
-    name: Get milestones data
+    name: Gantt plantuml generator
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.TOKEN_PRIVILEGED }}    
       - name: Get Miletones step
         id: milestone-data
         uses: pchainho/gantt-action@v0.16-alpha
