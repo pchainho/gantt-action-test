@@ -8,17 +8,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.TOKEN_PRIVILEGED }}    
-      - name: Get Miletones step
+      - name: Create Gantt file
         id: milestone-data
         uses: pchainho/gantt-action@v0.16-alpha
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
-      - name: Debug milestone value
-        run: echo "Title ${{ steps.milestone-data.outputs }}"
-
       - name: Commit Gantt plantuml file
         uses: EndBug/add-and-commit@v4.4.0
         with:
