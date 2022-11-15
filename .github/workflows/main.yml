@@ -14,6 +14,20 @@ on:
         labeled,
         unlabeled,
       ]
+  pull_request:
+    types:
+      [
+        opened,
+        closed,
+        edited,
+        demilestoned,
+        milestoned,
+        reopened,
+        assigned,
+        unassigned,
+        labeled,
+        unlabeled,
+      ]
 
 jobs:
   milestones_data_job:
@@ -24,10 +38,9 @@ jobs:
         uses: actions/checkout@v2
       - name: Create Gantt file
         id: milestone-data
-        uses: pchainho/gantt-action@v0.18-alpha
+        uses: pchainho/gantt-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
       - name: Commit Gantt plantuml file
         uses: EndBug/add-and-commit@v4.4.0
         with:
