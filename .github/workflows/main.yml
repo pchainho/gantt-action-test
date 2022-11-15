@@ -1,21 +1,7 @@
 
 on:
-  workflow_dispatch:
+  push:
   issues:
-    types:
-      [
-        opened,
-        closed,
-        edited,
-        demilestoned,
-        milestoned,
-        reopened,
-        assigned,
-        unassigned,
-        labeled,
-        unlabeled,
-      ]
-  pull_request:
     types:
       [
         opened,
@@ -39,7 +25,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Create Gantt file
         id: milestone-data
-        uses: pchainho/gantt-action@v0.16-alpha
+        uses: pchainho/gantt-action@v0.17-alpha
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
