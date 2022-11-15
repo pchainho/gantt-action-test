@@ -38,7 +38,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Create Gantt file
         id: milestone-data
-        uses: pchainho/gantt-action@master
+        uses: pchainho/gantt-action@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Commit Gantt plantuml file
