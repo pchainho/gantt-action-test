@@ -1,6 +1,5 @@
 
 on:
-  push:
   issues:
     types:
       [
@@ -25,7 +24,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Create Gantt file
         id: milestone-data
-        uses: pchainho/gantt-action@v0.17-alpha
+        uses: pchainho/gantt-action@v0.18-alpha
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
