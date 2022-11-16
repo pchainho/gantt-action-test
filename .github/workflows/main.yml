@@ -1,5 +1,5 @@
-
-on: [issues,milestone]
+name: gantt chart generator
+on: issues
 
 jobs:
   milestones_data_job:
