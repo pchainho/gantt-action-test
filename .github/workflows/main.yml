@@ -1,33 +1,5 @@
 
-on:
-  issues:
-    types:
-      [
-        opened,
-        closed,
-        edited,
-        demilestoned,
-        milestoned,
-        reopened,
-        assigned,
-        unassigned,
-        labeled,
-        unlabeled,
-      ]
-  pull_request:
-    types:
-      [
-        opened,
-        closed,
-        edited,
-        demilestoned,
-        milestoned,
-        reopened,
-        assigned,
-        unassigned,
-        labeled,
-        unlabeled,
-      ]
+on: [issues,milestone]
 
 jobs:
   milestones_data_job:
