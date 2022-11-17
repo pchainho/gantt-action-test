@@ -2,10 +2,12 @@ name: gantt chart generator
 on: issues
 
 jobs:
-  milestones_data_job:
+  milestones-plantuml:
     runs-on: ubuntu-latest
     name: Gantt plantuml generator
     steps:
+      - name: checkout
+        uses: actions/checkout@v2
       - name: Create Gantt file
         id: milestone-data
         uses: pchainho/gantt-action@main
@@ -18,6 +20,11 @@ jobs:
           author_name: pch
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN_PRIVILEGED }}
+  gantt-graph:
+    needs: [milestones-plantuml]
+    runs-on: ubuntu-latest
+    name: generate gantt graph
+    steps:
       - name: checkout
         uses: actions/checkout@v2
       - name: plantuml
@@ -26,5 +33,4 @@ jobs:
         with:
           message: "Render PlantUML files"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}          
-          
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
