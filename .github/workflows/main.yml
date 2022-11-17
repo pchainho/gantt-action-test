@@ -7,7 +7,7 @@ jobs:
     name: Gantt plantuml generator
     steps:
       - name: checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Create Gantt file
         id: milestone-data
         uses: pchainho/gantt-action@main
@@ -25,11 +25,9 @@ jobs:
     runs-on: ubuntu-latest
     name: generate gantt graph
     steps:
-      - name: checkout
-        uses: actions/checkout@v2
       - name: plantuml
         id: plantuml
-        uses: grassedge/generate-plantuml-action@master
+        uses: grassedge/generate-plantuml-action@v1.5
         with:
           message: "Render PlantUML files"
         env:
