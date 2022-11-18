@@ -1,5 +1,8 @@
 @startgantt
+saturday are closed
+sunday are closed
+printscale weekly
 Project starts 2022-08-15
-[first milestone] starts 2022-08-15 and ends 2022-09-12 and is 0% complete
+[first milestone] starts 2022-08-15 and ends 2022-09-12 and is 50% complete
 [teste] starts 2022-12-02 and ends 2023-01-26 and is 100% complete
 @endgantt
