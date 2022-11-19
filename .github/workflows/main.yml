@@ -1,5 +1,5 @@
 name: gantt chart generator
-on: issues
+on: [issues,milestone]
 
 jobs:
   milestones-plantuml:
