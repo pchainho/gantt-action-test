@@ -12,7 +12,7 @@ jobs:
         id: milestone-data
         uses: pchainho/gantt-action@main
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }},
+          GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
           MyToken: "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"
       - name: Commit Gantt plantuml file
         uses: EndBug/add-and-commit@v4.4.0
