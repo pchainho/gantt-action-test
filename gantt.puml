@@ -1,8 +1,24 @@
 @startgantt
+<style>
+ganttDiagram {
+   task {
+    BackGroundColor GreenYellow
+    LineColor Green 
+    unstarted {
+      BackGroundColor PaleVioletRed
+      LineColor FireBrick
+      FontColor Gold
+    }
+  }
+}
+</style>
 saturday are closed
 sunday are closed
-printscale weekly
+printscale weekly zoom 1
+today is colored in #Magenta
 Project starts 2022-08-15
 [first milestone] starts 2022-08-15 and ends 2022-09-12 and is 50% complete
+
 [teste] starts 2022-12-02 and ends 2023-01-26 and is 100% complete
+
 @endgantt
